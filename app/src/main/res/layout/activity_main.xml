@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".PurchiActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".PurchiActivity">
+
+            <EditText
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:imeOptions="actionSend"
+                android:id="@+id/idCardEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="یہاں نادرا کارڈ نمبر درج کریں"
+                android:inputType="number"
+                android:maxLength="13"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/holo_red_dark" />
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idCardEditText"
+                android:layout_marginTop="16dp"
+                android:text="Submit" />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textSize="28dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:text="یا"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:text="آپنی ووٹر پرچی حاصل کرنے کے لئے"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/card"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+                <Button
+                    android:id="@+id/scanButton"
+                    android:layout_gravity="center"
+                    android:text="Scan Your Nadra Card QRCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

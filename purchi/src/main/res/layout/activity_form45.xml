@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        android:text="NA-51-Polling station 1"
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="32dp"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/label"
+            android:text="Submitter's Phone Number"
+            />
+
+        <EditText
+            android:id="@+id/editTextSubmitterPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="phone"
+            android:hint="Enter Your Phone Number" />
+    </LinearLayout>
+    <!-- Input fields for votes of first four candidates -->
+    <LinearLayout
+        android:gravity="left"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/label"
+            android:text="PTI Votes"
+            />
+
+        <EditText
+            android:id="@+id/editTextPTI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="left"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/label"
+            android:text="PMLN Votes"
+            />
+
+        <EditText
+            android:id="@+id/editTextPMLN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="0" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="PPP Votes"
+            style="@style/label"/>
+
+        <EditText
+            android:id="@+id/editTextPPP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="left"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Other Votes"
+            style="@style/label" />
+
+        <EditText
+            android:id="@+id/editTextOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="0" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_margin="32dp"
+        android:id="@+id/btnSubmitForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Form 45" />
+</LinearLayout>
