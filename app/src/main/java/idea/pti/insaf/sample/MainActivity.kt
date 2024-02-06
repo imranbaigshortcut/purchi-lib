@@ -1,7 +1,6 @@
 package idea.pti.insaf.sample
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -11,10 +10,10 @@ import android.view.KeyEvent
 import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.text.isDigitsOnly
 import com.google.mlkit.vision.codescanner.GmsBarcodeScanning
 import idea.pti.insaf.purchi.PurchiLib
+import idea.pti.insaf.purchi.ui.CandidateSelectionActivity
 import idea.pti.insaf.purchi.ui.PurchiListActivity
 import idea.pti.insaf.sample.databinding.ActivityMainBinding
 
@@ -34,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         val scanner = GmsBarcodeScanning.getClient(this)
 
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         binding.sendButton.setOnClickListener {
             val maxLength = 13
@@ -100,7 +101,10 @@ class MainActivity : AppCompatActivity() {
             return@setOnEditorActionListener false
         }
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.form45.setOnClickListener {
+            formSubmit()
+        }
+
     }
 
     private fun validateIdCardNumber(idCardNumber: String): Boolean {
@@ -129,11 +133,17 @@ class MainActivity : AppCompatActivity() {
     private fun openVoterList(idCardNumber: String) {
 
         PurchiLib.baseUrl = "https://bb0cbe11c6e4c611.azadvoter.com/api/"
-        PurchiLib.secret = "secret key here"
+        PurchiLib.secret = "XoX0i5xqJQ526jn3mWIgIpvHCbCshYHMzdN1XZEJoj1PJb062WqSVZEtBVYfUVDmmpET8BDkhuwQFVXAazdb1eZ7AiNZ9fybYBwEYwZIsXK98apqln8vktiDuQwOIXi3"
 
 
         val intent = Intent(this, PurchiListActivity::class.java)
         intent.putExtra("cnic", idCardNumber)
+        startActivity(intent)
+    }
+
+    private fun formSubmit() {
+
+        val intent = Intent(this, CandidateSelectionActivity::class.java)
         startActivity(intent)
     }
 

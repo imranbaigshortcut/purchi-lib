@@ -16,7 +16,7 @@ class PurchiListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPurchiListBinding
     private lateinit var viewModel: PurchiListViewModel
-    private var adapter: VoterAdapter = VoterAdapter(arrayListOf())
+    private val adapter: VoterAdapter by lazy { VoterAdapter(this, arrayListOf()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

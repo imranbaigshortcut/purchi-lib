@@ -59,6 +59,9 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
 
     implementation("com.github.kittinunf.fuel:fuel-android:2.3.1")
+    implementation ("com.github.dhaval2404:imagepicker:2.1")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
 
     implementation ("com.google.code.gson:gson:2.10.1")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")

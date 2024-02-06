@@ -100,6 +100,17 @@
 
             </FrameLayout>
 
+
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/form45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idCardEditText"
+                android:layout_marginTop="16dp"
+                android:text="Upload Form 45" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

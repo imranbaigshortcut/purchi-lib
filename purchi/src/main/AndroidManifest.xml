@@ -9,6 +9,9 @@
 
     <application>
         <activity
+            android:name=".ui.CandidateSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Form45Activity"
             android:exported="false" />
         <activity

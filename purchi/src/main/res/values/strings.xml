@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">purchi</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="na">National</string>
+    <string name="punjab">Punjab</string>
+    <string name="sindh">Sindh</string>
+    <string name="kpk">KPK</string>
+    <string name="balochistan">Balochistan</string>
+    <string name="candidates">Candidates</string>
+    <string name="purchi">Voter Purchi</string>
+    <string name="tabdeli">Azadirazakar</string>
+    <string name="hint">Halqa NA10 Or City Name</string>
 </resources>

@@ -7,7 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#DC1212</color>
     <color name="blue">#00f</color>
+
+    <color name="dark_red">#D32F2F</color>
+    <color name="red">#D32F2F</color>
+    <color name="buttontint">#000</color>
+    <color name="green">#0f0</color>
+
+    <color name="your_text_color">#333333</color>
+    <color name="your_hint_color">#999999</color>
+
+    <color name="button_text">#fff</color>
+    <color name="scroll_text">#D32F2F</color>
+
+    <color name="purchi">#6363DA17</color>
 
 </resources>
