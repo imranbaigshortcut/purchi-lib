@@ -42,6 +42,7 @@
                 android:id="@+id/idCardEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="3520234061379"
                 android:digits="0123456789"
                 android:hint="یہاں نادرا کارڈ نمبر درج کریں"
                 android:inputType="number"

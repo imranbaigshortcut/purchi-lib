@@ -39,7 +39,7 @@ class PurchiListActivity : AppCompatActivity() {
             adapter.updateData(it)
         }
 
-        viewModel.getVotersById(id)
+        viewModel.getVoterById(id)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

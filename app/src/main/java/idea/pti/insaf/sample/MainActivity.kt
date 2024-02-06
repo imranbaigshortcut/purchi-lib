@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.text.isDigitsOnly
 import com.google.mlkit.vision.codescanner.GmsBarcodeScanning
+import idea.pti.insaf.purchi.PurchiLib
 import idea.pti.insaf.purchi.ui.PurchiListActivity
 import idea.pti.insaf.sample.databinding.ActivityMainBinding
 
@@ -21,10 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
+
+
         setContentView(view)
 
         val scanner = GmsBarcodeScanning.getClient(this)
@@ -123,6 +127,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openVoterList(idCardNumber: String) {
+
+        PurchiLib.baseUrl = "https://bb0cbe11c6e4c611.azadvoter.com/api/"
+        PurchiLib.secret = "secret key here"
+
+
         val intent = Intent(this, PurchiListActivity::class.java)
         intent.putExtra("cnic", idCardNumber)
         startActivity(intent)

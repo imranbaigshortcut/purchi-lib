@@ -32,3 +32,11 @@
 -keep class idea.pti.insaf.purchi.data.Candidate  { *; }
 -keepnames class idea.pti.insaf.purchi.api.Voter { *; }
 -keep class idea.pti.insaf.purchi.api.Voter { *; }
+
+
+-keep class idea.pti.insaf.purchi.api.Voter1 { *; }
+-keepnames class idea.pti.insaf.purchi.api.Voter1 { *; }
+-keep class idea.pti.insaf.purchi.api.Na { *; }
+-keepnames class idea.pti.insaf.purchi.api.Na { *; }
+-keep class idea.pti.insaf.purchi.api.Pa { *; }
+-keepnames class idea.pti.insaf.purchi.api.Pa { *; }
