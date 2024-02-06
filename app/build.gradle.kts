@@ -49,9 +49,9 @@ android {
 
 dependencies {
 
-     implementation(project( ":purchi"))
+    // implementation(project( ":purchi"))
 
-    // implementation("com.github.imranbaigshortcut:purchi-lib:1.0.4")
+    implementation("com.github.imranbaigshortcut:purchi-lib:1.1.1")
 
 
     implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
