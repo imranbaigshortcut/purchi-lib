@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.LintOptions
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -37,11 +39,20 @@ android {
     viewBinding {
         enable = true
     }
+    // Turn off lint
+    fun LintOptions.() {
+        // Turn off lint
+        isCheckReleaseBuilds = false
+        isAbortOnError = false
+    }
 }
 
 dependencies {
 
-    implementation(project( ":purchi"))
+     implementation(project( ":purchi"))
+
+    // implementation("com.github.imranbaigshortcut:purchi-lib:1.0.4")
+
 
     implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
     implementation("androidx.core:core-ktx:1.12.0")

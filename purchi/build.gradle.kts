@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.LintOptions
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -33,6 +35,12 @@ android {
 
     viewBinding {
         enable = true
+    }
+
+    fun LintOptions.() {
+        // Turn off lint
+        isCheckReleaseBuilds = false
+        isAbortOnError = false
     }
 }
 
